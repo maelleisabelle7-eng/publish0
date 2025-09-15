@@ -11,8 +11,6 @@
       align-items: center;
       height: 100vh;
       background: #f8f8f8;
-      transform: scale(0.8); /* ✅ réduit davantage le contenu */
-      transform-origin: center; /* ✅ garde le centrage */
     }
     .container {
       width: 500px;
@@ -154,8 +152,17 @@
 
     updateProgress();
   </script>
+  <script>
+  // Quand la page est chargée
+  window.addEventListener("DOMContentLoaded", () => {
+    let video = document.querySelector(".video-placeholder video");
+    video.playbackRate = 0.5; // ✅ vitesse réduite (0.5 = 50% plus lent)
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
